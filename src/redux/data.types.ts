@@ -15,4 +15,15 @@ export interface Car {
   address: string;
   rentalConditions: string;
   mileage: number;
+  id_: string;
+}
+
+export interface CarsState {
+  cars: Car[] | [];
+  loading: boolean;
+  error: string | null;
+}
+
+export interface FavoritesState {
+  favorites: Car[] | [];
 }
