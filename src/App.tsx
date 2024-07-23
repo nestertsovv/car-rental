@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -8,6 +9,7 @@ const FavoritesPage = lazy(() => import("./pages/FavoritesPage/FavoritesPage"));
 function App() {
   return (
     <>
+      <Toaster position="top-center" />
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />

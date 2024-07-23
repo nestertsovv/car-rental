@@ -3,6 +3,7 @@ import { AxiosError } from "axios";
 import { carsApi } from "../../services/carsApi";
 
 import { Car } from "../data.types";
+import toast from "react-hot-toast";
 
 export const getAllFavorites = createAsyncThunk(
   "favorites/getAllFavorites",
@@ -11,6 +12,7 @@ export const getAllFavorites = createAsyncThunk(
       const response = await carsApi.get("/favorites");
       return response.data;
     } catch (error) {
+      toast.error("Couldn't fetch the favorites, please try again");
       thunkApi.rejectWithValue((error as AxiosError).response?.status);
     }
   }
@@ -23,6 +25,7 @@ export const addToFavorites = createAsyncThunk(
       const response = await carsApi.post("/favorites", car);
       return response.data;
     } catch (error) {
+      toast.error("Couldn't to add to favorites, please try again");
       thunkApi.rejectWithValue((error as AxiosError).response?.status);
     }
   }
@@ -32,14 +35,10 @@ export const deleteFromFavorites = createAsyncThunk(
   "favorites/deleteFromFavorites",
   async (id: string, thunkApi) => {
     try {
-      console.log(id);
-
       const response = await carsApi.delete(`/favorites/${id}`);
-
-      console.log(response.data);
-
       return response.data;
     } catch (error) {
+      toast.error("Couldn't delete from favorites, please try again");
       thunkApi.rejectWithValue((error as AxiosError).response?.status);
     }
   }

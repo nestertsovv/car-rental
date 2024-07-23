@@ -12,6 +12,7 @@ import {
   getAllFavorites,
 } from "../../redux/favorites/operations";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 type Props = {
   car: Car;
@@ -43,12 +44,18 @@ const CarsItem = ({ car }: Props) => {
       dispatch(deleteFromFavorites(itemForDelete.id_))
         .unwrap()
         .then(() => {
+          toast.success(
+            `${car.make} ${car.model} was successfully deleted from favorites`
+          );
           dispatch(getAllFavorites());
         });
     } else {
       dispatch(addToFavorites(car))
         .unwrap()
         .then(() => {
+          toast.success(
+            `${car.make} ${car.model} was successfully added to favorites`
+          );
           dispatch(getAllFavorites());
         });
     }
