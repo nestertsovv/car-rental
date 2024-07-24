@@ -19,7 +19,11 @@ export interface Car {
 }
 
 export interface CarsState {
-  cars: Car[] | [];
+  cars: {
+    results: Car[] | [];
+    total: number;
+    totalPages: number;
+  };
   loading: boolean;
   error: string | null;
 }

@@ -2,6 +2,7 @@
   @apply mx-[15px] mb-[50px];
 
   flex: 1 0 21%;
+  max-width: calc(25% - 30px);
 
   .imageWrapper {
     .favorite {

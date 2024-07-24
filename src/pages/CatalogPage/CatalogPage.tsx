@@ -11,18 +11,29 @@ const CatalogPage = () => {
   const cars = useAppSelector(selectCars);
   const loading = useAppSelector(selectLoading);
 
+  const onLoadMore = () => {
+    setPage((prev) => prev + 1);
+  };
+
   useEffect(() => {
     dispatch(getCars(page));
     dispatch(getAllFavorites());
-  }, [dispatch]);
+  }, [dispatch, page]);
 
-  return cars.length === 0 && !loading ? (
+  return cars.results.length === 0 && !loading ? (
     <div>Something went wrong, please try again</div>
   ) : (
     <>
-      <h1 className="text-center font-semibold text-[30px]">Catalog page</h1>
-
       <CarsList />
+
+      {page < cars?.totalPages && (
+        <button
+          className="p-[10px] block mx-auto my-[10px] text-[20px] text-white bg-[#3470ff] text-center rounded-[12px]"
+          onClick={onLoadMore}
+        >
+          Load more
+        </button>
+      )}
     </>
   );
 };

@@ -9,7 +9,11 @@ import { getCars } from "./operations";
 import { CarsState } from "../data.types";
 
 const initialState: CarsState = {
-  cars: [],
+  cars: {
+    results: [],
+    total: 0,
+    totalPages: 0,
+  },
   loading: false,
   error: null,
 };
@@ -21,7 +25,9 @@ const carsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getCars.fulfilled, (state, action) => {
-        state.cars = action.payload;
+        state.cars.results = [...state.cars.results, ...action.payload.results];
+        state.cars.total = action.payload.total;
+        state.cars.totalPages = action.payload.totalPages;
       })
       .addMatcher(isFulfilled, (state) => {
         state.loading = false;

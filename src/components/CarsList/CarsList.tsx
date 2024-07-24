@@ -8,7 +8,7 @@ const CarsList = () => {
   return (
     <div>
       <ul className="flex flex-wrap">
-        {cars.map((car) => (
+        {cars.results.map((car) => (
           <CarsItem key={car.id} car={car} />
         ))}
       </ul>

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Toaster position="top-center" />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
