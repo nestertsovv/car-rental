@@ -1,3 +1,138 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* * Colors */
+  --aqua-color: #41cc9e;
+  --aqua-color-hover: #33a57f;
+  --purple-color: #9799ca;
+  --black-color: #121417;
+  --white-color: #fff;
+  --filter-bg-color: #f7f7fb;
+  --additional-text: #363535;
+}
+
+body {
+  min-width: 320px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.animated-button {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  letter-spacing: 0.05em;
+  border-radius: 12px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.animated-button:link,
+.animated-button:visited {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  letter-spacing: 0.05em;
+  border-radius: 12px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.animated-button:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.6s ease 0s;
+  -moz-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+}
+.animated-button:link:after,
+.animated-button:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: 0;
+  -webkit-transition: all 0.6s ease 0s;
+  -moz-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+}
+.animated-button.aqua:hover,
+.animated-button.purple:hover {
+  color: #fff;
+  text-shadow: none;
+}
+.animated-button:hover:after {
+  height: 450%;
+}
+.animated-button.aqua:link:hover,
+.animated-button.aqua:visited:hover,
+.animated-button.purple:link:hover,
+.animated-button.purple:visited {
+  color: #fff;
+  text-shadow: none;
+}
+.animated-button:link:hover:after,
+.animated-button:visited:hover:after {
+  height: 450%;
+}
+.animated-button.aqua {
+  border: 2px solid var(--aqua-color);
+  color: var(--aqua-color);
+}
+.animated-button.aqua:after {
+  background: var(--aqua-color);
+  opacity: 0.5;
+  -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  transform: translateY(-50%) translateX(-50%);
+}
+.animated-button.purple {
+  border: 2px solid var(--purple-color);
+  color: var(--purple-color);
+}
+.animated-button.purple:after {
+  background: var(--purple-color);
+  opacity: 0.5;
+  -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  transform: translateY(-50%) translateX(-50%);
+}
+.animated-button.aqua:hover:after,
+.animated-button.purple:hover:after {
+  opacity: 1;
+  height: 600% !important;
+}
+
+.ReactModal__Body--open {
+  @apply overflow-hidden;
+}

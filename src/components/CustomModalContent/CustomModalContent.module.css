@@ -1,0 +1,31 @@
+.infoList {
+  @apply flex mb-[4px];
+
+  li {
+    @apply text-[12px] relative;
+
+    /* flex: 1 0 30%; */
+
+    &:not(:last-of-type) {
+      @apply pr-[10px];
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        right: 5px;
+        background: rgba(18, 20, 23, 0.1);
+      }
+    }
+
+    color: rgba(18, 20, 23, 0.5);
+  }
+}
+
+.conditionsList {
+  li {
+    @apply text-[12px] text-[var(--additional-text)] py-[7px] px-[14px] bg-[var(--filter-bg-color)] rounded-[35px];
+  }
+}

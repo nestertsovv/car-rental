@@ -1,0 +1,9 @@
+.active {
+  @apply text-[var(--aqua-color)];
+}
+
+.itemLink {
+  a {
+    @apply text-[20px] font-semibold;
+  }
+}

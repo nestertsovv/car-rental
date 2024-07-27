@@ -525,7 +525,7 @@
     "make": "Chrysler",
     "model": "Voyager",
     "type": "Van/Minivan",
-    "img": "https://ftp.goit.study/img/cars-test-task/chrysler_voyager.jpg",
+    "img": "https://ftp.goit.study/img/cars-test-task/gmc_yukon_denali.jpeg",
     "description": "The Chrysler Voyager is a practical and versatile van/minivan that provides comfortable seating, ample cargo space, and a range of convenient features for family-oriented transportation.",
     "fuelConsumption": "8.2",
     "engineSize": "3.6L V6",

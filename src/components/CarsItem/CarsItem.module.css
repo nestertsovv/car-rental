@@ -1,19 +1,21 @@
 .item {
-  @apply mx-[15px] mb-[50px];
+  @apply mx-[12px] mb-[48px] flex flex-wrap content-start;
 
   flex: 1 0 21%;
-  max-width: calc(25% - 30px);
+  max-width: calc(25% - 24px);
 
   .imageWrapper {
     .favorite {
-      &:not(.isFavorite):hover {
-        @apply fill-white;
+      @apply transition-all ease-linear delay-200;
+
+      &:not(.isFavorite) {
+        @apply hover:fill-[var(--white-color)];
       }
     }
 
     .isFavorite {
-      fill: #3470ff;
-      stroke: #3470ff;
+      fill: var(--aqua-color);
+      stroke: var(--aqua-color);
     }
 
     img {
@@ -25,16 +27,18 @@
     @apply flex mb-[4px];
 
     li {
-      @apply text-[12px] pr-[12px] relative;
+      @apply text-[12px] relative;
 
       &:not(:last-of-type) {
+        @apply pr-[10px];
+
         &::before {
           content: "";
           display: block;
           position: absolute;
           width: 1px;
           height: 100%;
-          right: 6px;
+          right: 5px;
           background: rgba(18, 20, 23, 0.1);
         }
       }
@@ -47,7 +51,8 @@
     @apply mt-[28px];
 
     .btn {
-      @apply w-[100%] flex justify-center items-center bg-[#3470FF] text-[14px] text-[#fff] font-semibold p-[12px] rounded-[12px];
+      /* @apply transition-all ease-linear delay-200 w-[100%] flex justify-center items-center bg-[var(--aqua-color)] hover:bg-[var(--aqua-color-hover)] text-[14px] text-[#fff] font-semibold p-[12px] rounded-[12px]; */
+      @apply w-[100%];
     }
   }
 }

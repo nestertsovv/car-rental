@@ -1,0 +1,27 @@
+.select {
+  @apply h-[100%];
+
+  &.selectBrand {
+    @apply min-w-[220px];
+  }
+
+  &.selectPricePerHour {
+    @apply min-w-[125px];
+  }
+
+  &.selectMileage {
+    @apply min-w-[160px];
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:focus-within svg {
+    transform: rotate(180deg);
+  }
+}
+
+.btnReset {
+  @apply border-[var(--purple-color)];
+}

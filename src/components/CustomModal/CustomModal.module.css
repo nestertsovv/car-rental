@@ -1,0 +1,23 @@
+.bgModal {
+  @apply w-[100vw] p-[30px] bg-[var(--white-color)] h-screen max-h-screen flex justify-center items-center content-between overflow-hidden md:flex-row md:flex-wrap md:max-w-[533px] md:h-[80vh] md:p-[40px] md:rounded-[24px] relative flex-wrap;
+}
+
+.bgWrapper {
+  @apply overflow-y-auto;
+
+  max-height: calc(100% - 70px);
+}
+
+.btnClose {
+  @apply absolute top-[12px] right-[12px] md:top-[20px] md:right-[20px];
+
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    transition: 0.3s all ease;
+  }
+}
