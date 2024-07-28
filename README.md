@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+<h1 align="center">Rental Car</h1>
+<h3 align="center">Choose a car that suits your needs</h3>
+<hr>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Docs
 
-Currently, two official plugins are available:
+- [About](#about)
+- [Usage](#usage)
+  - [Filters](#filters)
+  - [Favorites](#favorites)
+  - [Learn more](#learn-more)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# About
 
-## Expanding the ESLint configuration
+- This rental car website offers a wide selection of vehicles, ensuring users can find a car that fits their specific needs.
+- The advanced filtering options allow users to search by brand, hourly price, and mileage range, making the selection process quick and efficient.
+- Competitive pricing ensures that users get the best value for their money.
+- Additionally, the user-friendly interface simplifies the booking process, providing a seamless experience from start to finish.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Usage
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Filters
