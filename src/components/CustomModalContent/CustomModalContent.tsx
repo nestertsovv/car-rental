@@ -73,12 +73,12 @@ const CustomModalContent = ({ car }: Props) => {
         <h4 className="mb-[8px] font-semibold">
           Accessories and functionalities:
         </h4>
-        <ul className={clsx(s.infoList)}>
+        <ul className={clsx(s.infoList, s.infoListMobile)}>
           {car.accessories?.map((acs) => (
             <li key={acs}>{acs}</li>
           ))}
         </ul>
-        <ul className={clsx(s.infoList)}>
+        <ul className={clsx(s.infoList, s.infoListMobile)}>
           {car.functionalities?.map((fnc) => (
             <li key={fnc}>{fnc}</li>
           ))}
