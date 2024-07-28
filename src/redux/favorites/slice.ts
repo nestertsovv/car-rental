@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { Car, FavoritesState } from "../data.types";
-// import { addToFavorites, getAllFavorites } from "./operations";
+import { FavoritesState } from "../data.types";
 
 const initialState: FavoritesState = {
   favorites: [],
@@ -19,15 +18,6 @@ const favoritesSlice = createSlice({
         (favorite) => favorite.id !== action.payload
       );
     },
-  },
-  extraReducers: (builder) => {
-    builder;
-    // .addCase(addToFavorites.fulfilled, (state, action) => {
-    //   state.favorites = [...state.favorites, action.payload];
-    // })
-    // .addCase(getAllFavorites.fulfilled, (state, action) => {
-    //   state.favorites = action.payload;
-    // });
   },
 });
 

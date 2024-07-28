@@ -8,7 +8,7 @@ export const getAllCars = createAsyncThunk(
   "cars/getAllCars",
   async (_, thunkApi) => {
     try {
-      const response = await carsApi.get("/catalog");
+      const response = await carsApi.get("/advert");
 
       response.data.results = response.data;
       response.data.total = response.data.length;
@@ -33,7 +33,7 @@ export const getCars = createAsyncThunk(
         },
       };
 
-      const response = await carsApi.get("/catalog", params);
+      const response = await carsApi.get("/advert", params);
 
       return response.data;
     } catch (error) {
