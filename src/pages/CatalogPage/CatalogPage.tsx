@@ -72,9 +72,9 @@ const CatalogPage = () => {
 
         {cars.length !== 0 && <CarsList cars={cars} />}
 
-        {filteredCars.length !== 0 && !isEmptyInfo ? (
-          <CarsList cars={filteredCars} />
-        ) : (
+        {filteredCars.length !== 0 && <CarsList cars={filteredCars} />}
+
+        {isEmptyInfo && (
           <div className="my-[50px] text-center text-[18px]">{isEmptyInfo}</div>
         )}
 

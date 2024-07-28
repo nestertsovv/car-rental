@@ -1,0 +1,13 @@
+.mainWrapper {
+  @apply flex flex-wrap justify-center items-center content-center py-[24px];
+
+  height: calc(100vh - 102px);
+
+  .mainH1 {
+    @apply text-[48px] font-bold mb-[24px];
+  }
+
+  .additionalText {
+    @apply text-[18px] text-center leading-[1.7];
+  }
+}
