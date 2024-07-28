@@ -19,7 +19,7 @@ const CustomModalContent = ({ car }: Props) => {
   return (
     <>
       <div className={clsx(s.imgWrapper, "mb-[14px]")}>
-        <LazyLoadImage
+        {/* <LazyLoadImage
           src={car.img}
           alt={`${car.make} - ${car.model}`}
           wrapperProps={{
@@ -27,6 +27,11 @@ const CustomModalContent = ({ car }: Props) => {
           }}
           delayTime={500}
           effect="blur"
+          className="block w-[100%] h-[100%] rounded-[14px]"
+        /> */}
+        <img
+          src={car.img}
+          alt={`${car.make} - ${car.model}`}
           className="block w-[100%] h-[100%] rounded-[14px]"
         />
       </div>

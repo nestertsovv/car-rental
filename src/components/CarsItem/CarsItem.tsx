@@ -87,7 +87,7 @@ const CarsItem = ({ car }: Props) => {
               className={clsx(s.favorite, isFavorite && s.isFavorite)}
             />
           </button>
-          <LazyLoadImage
+          {/* <LazyLoadImage
             src={car.img}
             alt={`${car.make} - ${car.model}`}
             wrapperProps={{
@@ -95,6 +95,11 @@ const CarsItem = ({ car }: Props) => {
             }}
             delayTime={500}
             effect="blur"
+            className="block w-[100%] h-[100%] rounded-[14px]"
+          /> */}
+          <img
+            src={car.img}
+            alt={`${car.make} - ${car.model}`}
             className="block w-[100%] h-[100%] rounded-[14px]"
           />
         </div>
