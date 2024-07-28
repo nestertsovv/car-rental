@@ -17,6 +17,7 @@ import {
 import icons from "../../images/icons.svg";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import s from "./CarsItem.module.css";
+import IconHeart from "../Icons/IconHeart/IconHeart";
 
 type Props = {
   car: Car;
@@ -79,15 +80,11 @@ const CarsItem = ({ car }: Props) => {
             className="absolute top-[15px] right-[15px] z-[1]"
             onClick={() => onToggleToFavorite(car)}
           >
-            <svg
-              width={18}
-              height={18}
-              stroke={isFavorite ? "var(--aqua-color)" : "var(--white-color)"}
-              fill={isFavorite ? "var(--aqua-color)" : "transparent"}
+            <IconHeart
+              fill={isFavorite && "var(--aqua-color)"}
+              stroke={isFavorite && "var(--aqua-color)"}
               className={clsx(s.favorite, isFavorite && s.isFavorite)}
-            >
-              <use href={`${icons}#icon-heart`}></use>
-            </svg>
+            />
           </button>
           <LazyLoadImage
             src={car.img}

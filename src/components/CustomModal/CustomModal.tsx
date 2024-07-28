@@ -3,6 +3,7 @@ import Modal from "react-modal";
 
 import icons from "../../images/icons.svg";
 import s from "./CustomModal.module.css";
+import IconClose from "../Icons/IconClose/IconClose";
 
 type Props = {
   isOpen: boolean;
@@ -42,9 +43,7 @@ const CustomModal = ({ children, isOpen, onClose }: Props) => {
     >
       <div className={s.bgModal}>
         <button onClick={onClose} className={s.btnClose}>
-          <svg width={14} height={14} stroke="var(--black-color)">
-            <use href={`${icons}#icon-close`}></use>
-          </svg>
+          <IconClose />
         </button>
         <div className={s.bgWrapper}>{children}</div>
         <div className="w-[100%] mt-[24px]">

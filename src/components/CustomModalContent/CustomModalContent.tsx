@@ -5,6 +5,7 @@ import { Car } from "../../redux/data.types";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import s from "./CustomModalContent.module.css";
+import { log } from "console";
 
 type Props = {
   car: Car;
@@ -15,6 +16,18 @@ const CustomModalContent = ({ car }: Props) => {
   const city = address[1];
   const country = address[2];
   const price = car.rentalPrice.replace("$", "") + "$";
+
+  const convertCondition = (cond: string) => {
+    if (!cond.includes("age:")) return cond;
+
+    const age = cond.slice(-2);
+
+    return (
+      <>
+        Minimum age: <span className="text-[var(--aqua-color)]">{age}</span>
+      </>
+    );
+  };
 
   return (
     <>
@@ -74,11 +87,9 @@ const CustomModalContent = ({ car }: Props) => {
       <div>
         <h4 className="mb-[8px] font-semibold">Rental Conditions:</h4>
         <ul className={clsx(s.conditionsList, "flex flex-wrap gap-[8px]")}>
-          <li>
-            Minimum age:<span className="text-[var(--aqua-color)]"> 25</span>
-          </li>
-          <li>Valid driver's license</li>
-          <li>Security deposit required</li>
+          {car.rentalConditions.split("\n").map((cond) => (
+            <li key={cond}>{convertCondition(cond)}</li>
+          ))}
           <li>
             Mileage:
             <span className="text-[var(--aqua-color)]">

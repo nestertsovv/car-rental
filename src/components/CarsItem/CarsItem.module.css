@@ -21,16 +21,9 @@
 
   .imageWrapper {
     .favorite {
-      @apply transition-all ease-linear delay-200;
-
       &:not(.isFavorite) {
         @apply hover:fill-[var(--white-color)];
       }
-    }
-
-    .isFavorite {
-      fill: var(--aqua-color);
-      stroke: var(--aqua-color);
     }
 
     img {
