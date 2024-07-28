@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <Container>
       <div className={clsx(s.mainWrapper)}>
-        <h1 className={clsx(s.mainH1)}>Rental Car</h1>
+        <h1 className={clsx(s.mainH1)}>Car Rental</h1>
         <div className="mb-[24px]">
           <p className={s.additionalText}>
             This rental car website offers a wide selection of vehicles,

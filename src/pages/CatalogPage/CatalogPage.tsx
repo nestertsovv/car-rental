@@ -22,6 +22,7 @@ import { FilterProps } from "../../redux/data.types";
 import { setFilteredCars, setIsEmptyInfo } from "../../redux/filters/slice";
 import { setCars, setPage } from "../../redux/cars/slice";
 import { getCarsByFilter } from "../../helpers/getCarsByFilter";
+import { useMediaQuery } from "react-responsive";
 
 const CatalogPage = () => {
   const dispatch = useAppDispatch();
@@ -31,6 +32,8 @@ const CatalogPage = () => {
   const loading = useAppSelector(selectLoading);
   const filteredCars = useAppSelector(selectFilteredCars);
   const isEmptyInfo = useAppSelector(selectIsEmptyInfo);
+
+  const isTablet = useMediaQuery({ query: "(max-width: 1023px)" });
 
   const onLoadMore = () => {
     dispatch(setPage(page + 1));
@@ -66,8 +69,10 @@ const CatalogPage = () => {
   return (
     <>
       <Container>
-        {preflightCars.total !== 0 && (
+        {preflightCars.total !== 0 && !isTablet ? (
           <Filters onFilteredCars={onFilteredCars} />
+        ) : (
+          ""
         )}
 
         {cars.length !== 0 && <CarsList cars={cars} />}

@@ -1,8 +1,23 @@
 .item {
-  @apply mx-[12px] mb-[48px] flex flex-wrap content-start;
+  @apply mx-0 md:mx-[12px] mb-[48px] flex flex-wrap content-start;
 
-  flex: 1 0 21%;
-  max-width: calc(25% - 24px);
+  flex: 1 0 100%;
+  max-width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex: 1 0 45%;
+    max-width: calc(50% - 24px);
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex: 1 0 30%;
+    max-width: calc(33.333% - 24px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex: 1 0 21%;
+    max-width: calc(25% - 24px);
+  }
 
   .imageWrapper {
     .favorite {
@@ -30,7 +45,7 @@
       @apply text-[12px] relative;
 
       &:not(:last-of-type) {
-        @apply pr-[10px];
+        @apply pr-[30px] lg:pr-[18px] xl:pr-[10px];
 
         &::before {
           content: "";
@@ -38,8 +53,20 @@
           position: absolute;
           width: 1px;
           height: 100%;
-          right: 5px;
+          right: 15px;
           background: rgba(18, 20, 23, 0.1);
+        }
+
+        @media screen and (min-width: 1024px) {
+          &::before {
+            right: 9px;
+          }
+        }
+
+        @media screen and (min-width: 1280px) {
+          &::before {
+            right: 5px;
+          }
         }
       }
 

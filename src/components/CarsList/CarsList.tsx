@@ -9,7 +9,7 @@ type Props = {
 const CarsList = ({ cars }: Props) => {
   return (
     <div>
-      <ul className="flex flex-wrap mx-[-12px]">
+      <ul className="flex flex-wrap md:mx-[-12px]">
         {cars?.map((car) => (
           <CarsItem key={car.id} car={car} />
         ))}

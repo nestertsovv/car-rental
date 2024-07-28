@@ -89,12 +89,9 @@ const Filters = ({ onFilteredCars }: Props) => {
   return (
     <div className="flex gap-[18px] justify-center mb-[24px] items-end">
       <div>
-        <label
-          htmlFor="brand"
-          className="inline-block mb-[8px] text-[var(--label-color)]"
-        >
+        <span className="inline-block mb-[8px] text-[var(--label-color)]">
           Car brand
-        </label>
+        </span>
         <Select
           options={brandsName}
           placeholder="Enter the brand"
@@ -112,12 +109,9 @@ const Filters = ({ onFilteredCars }: Props) => {
       </div>
 
       <div>
-        <label
-          htmlFor="pricePerHour"
-          className="inline-block mb-[8px] text-[var(--label-color)]"
-        >
+        <span className="inline-block mb-[8px] text-[var(--label-color)]">
           Price / 1 hour
-        </label>
+        </span>
         <Select
           options={pricesPerHourList}
           placeholder="To $"
@@ -135,12 +129,9 @@ const Filters = ({ onFilteredCars }: Props) => {
       </div>
 
       <div>
-        <label
-          htmlFor="mileageFrom"
-          className="inline-block mb-[8px] text-[var(--label-color)]"
-        >
+        <span className="inline-block mb-[8px] text-[var(--label-color)]">
           Car mileage / km
-        </label>
+        </span>
         <Select
           options={mileageFromList}
           placeholder="From"
@@ -158,12 +149,9 @@ const Filters = ({ onFilteredCars }: Props) => {
       </div>
 
       <div>
-        <label
-          htmlFor="mileageTo"
-          className="inline-block mb-[8px] text-[var(--label-color)]"
-        >
+        <span className="inline-block mb-[8px] text-[var(--label-color)]">
           Car mileage / km
-        </label>
+        </span>
         <Select
           options={mileageToList}
           placeholder="To"
