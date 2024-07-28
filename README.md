@@ -1,6 +1,5 @@
 <h1 align="center">Rental Car</h1>
 <h3 align="center">Choose a car that suits your needs</h3>
-<hr>
 
 # Docs
 
