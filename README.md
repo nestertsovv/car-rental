@@ -20,3 +20,12 @@
 # Usage
 
 ### Filters
+
+- Choose the filters you need
+<p align="center"><img align="center" src="./.github/filters_1.png"/></p>
+
+- After that, click the Search button
+<p align="center"><img align="center" src="./.github/filters_2.png"/></p>
+
+- Get search data according to your criteria
+<p align="center"><img align="center" src="./.github/filters_3.png"/></p>
