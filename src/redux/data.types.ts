@@ -15,7 +15,6 @@ export interface Car {
   address: string;
   rentalConditions: string;
   mileage: number;
-  id_: string;
 }
 
 export interface CarsState {
@@ -39,19 +38,15 @@ export interface FilterState {
   isEmptyInfo: string;
 }
 
-export interface FilterParams {
-  make?: string;
-  model?: string;
-  rentalPrice?: string | number;
-  mileage?: string | number;
-  filter?: string | number;
-  search?: string | number;
-  sortBy?: string;
-}
-
 export interface FilterProps {
   brand?: string;
   perHour?: string;
   mileageFrom?: string;
   mileageTo?: string;
+}
+
+export interface NumberObject {
+  value: number | string;
+  label: number | string;
+  count: number;
 }

@@ -1,10 +1,4 @@
-import { Car } from "../redux/data.types";
-
-export type NumberObject = {
-  value: number | string;
-  label: number | string;
-  count: number;
-};
+import { Car, NumberObject } from "../redux/data.types";
 
 const getAllPricesPerHour = (arr: Car[]) => {
   const pricePerHour = arr.map((car) => {

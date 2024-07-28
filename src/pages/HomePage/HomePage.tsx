@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-import s from "./HomePage.module.css";
 import Container from "../../components/Container/Container";
+
+import s from "./HomePage.module.css";
 
 const HomePage = () => {
   return (

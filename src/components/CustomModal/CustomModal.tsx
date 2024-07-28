@@ -1,8 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
 
-import s from "./CustomModal.module.css";
 import { Icon } from "../Icon/Icon";
+
+import s from "./CustomModal.module.css";
 
 type Props = {
   isOpen: boolean;

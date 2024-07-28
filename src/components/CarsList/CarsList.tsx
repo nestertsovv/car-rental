@@ -10,7 +10,7 @@ const CarsList = ({ cars }: Props) => {
   return (
     <div>
       <ul className="flex flex-wrap mx-[-12px]">
-        {cars.map((car) => (
+        {cars?.map((car) => (
           <CarsItem key={car.id} car={car} />
         ))}
       </ul>

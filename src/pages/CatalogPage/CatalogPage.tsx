@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import Container from "../../components/Container/Container";
 import CarsList from "../../components/CarsList/CarsList";
 import Filters from "../../components/Filters/Filters";
+import Loader from "../../components/Loader/Loader";
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { getCars } from "../../redux/cars/operations";
@@ -18,10 +19,9 @@ import {
   selectIsEmptyInfo,
 } from "../../redux/filters/selectors";
 import { FilterProps } from "../../redux/data.types";
-import { getCarsByFilter } from "../../helpers/getCarsByFilter";
 import { setFilteredCars, setIsEmptyInfo } from "../../redux/filters/slice";
 import { setCars, setPage } from "../../redux/cars/slice";
-import Loader from "../../components/Loader/Loader";
+import { getCarsByFilter } from "../../helpers/getCarsByFilter";
 
 const CatalogPage = () => {
   const dispatch = useAppDispatch();

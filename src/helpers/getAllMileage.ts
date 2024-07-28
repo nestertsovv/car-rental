@@ -1,5 +1,4 @@
-import { Car } from "../redux/data.types";
-import { NumberObject } from "./getAllPricesPerHour";
+import { Car, NumberObject } from "../redux/data.types";
 
 const getAllMileage = (arr: Car[], type: string) => {
   const allMileage = arr.map((car) => {

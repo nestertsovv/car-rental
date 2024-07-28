@@ -33,6 +33,5 @@ export const colorStyles: StylesConfig = {
     ...styles,
     color: "#121417",
     ":hover": { color: "#121417" },
-    // transform: isFocused ? "rotate(180deg)" : "",
   }),
 };

@@ -8,16 +8,15 @@ import { selectPage, selectPreflightCars } from "../../redux/cars/selectors";
 import getAllPricesPerHour from "../../helpers/getAllPricesPerHour";
 import getAllMileage from "../../helpers/getAllMileage";
 import { FilterProps } from "../../redux/data.types";
-import { colorStyles } from "./FiltersStyles";
 import { setFilteredCars, setIsEmptyInfo } from "../../redux/filters/slice";
 import {
   selectFilteredCars,
   selectIsEmptyInfo,
 } from "../../redux/filters/selectors";
-
 import { setPage } from "../../redux/cars/slice";
 import { getCars } from "../../redux/cars/operations";
 
+import { colorStyles } from "./FiltersStyles";
 import s from "./Filters.module.css";
 
 type Props = {
