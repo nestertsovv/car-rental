@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 
-import icons from "../../images/icons.svg";
 import s from "./CustomModal.module.css";
 import IconClose from "../Icons/IconClose/IconClose";
 
@@ -17,16 +16,18 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
     backgroundColor: "transparent",
     border: "none",
     padding: "0",
+    inset: "initial",
   },
   overlay: {
     backgroundColor: "rgba(34, 13, 91, 0.23)",
     backdropFilter: "blur(10px)",
     zIndex: "50",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 };
 

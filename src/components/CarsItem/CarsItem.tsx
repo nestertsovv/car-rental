@@ -14,7 +14,6 @@ import {
   removeFromFavorites,
 } from "../../redux/favorites/slice";
 
-import icons from "../../images/icons.svg";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import s from "./CarsItem.module.css";
 import IconHeart from "../Icons/IconHeart/IconHeart";
