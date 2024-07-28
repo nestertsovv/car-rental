@@ -46,5 +46,5 @@
 - You can view more information about the car by clicking on the "Learn more" button
 <p align="center"><img align="center" src="./.github/learn_more_1.png"/></p>
 
-- In the pop-up window, you can view more information about the car and contact us for an order by clicking on the "Rent car" button
+- In the pop-up window, you can view more information about the car and contact us for an order by clicking on the "Rental car" button
 <p align="center"><img align="center" src="./.github/learn_more_2.png"/></p>
