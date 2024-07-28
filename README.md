@@ -29,3 +29,22 @@
 
 - Get search data according to your criteria
 <p align="center"><img align="center" src="./.github/filters_3.png"/></p>
+
+### Favorites
+
+- You can add the car to your Favorites list by clicking on the heart icon
+<p align="center"><img align="center" src="./.github/favorites_1.png"/></p>
+
+- If the car is already in your Favorites list, the heart icon will be colored
+<p align="center"><img align="center" src="./.github/favorites_2.png"/></p>
+
+- After that, the car will appear on the "Favorites" page
+<p align="center"><img align="center" src="./.github/favorites_3.png"/></p>
+
+### Learn more
+
+- You can view more information about the car by clicking on the "Learn more" button
+<p align="center"><img align="center" src="./.github/learn_more_1.png"/></p>
+
+- In the pop-up window, you can view more information about the car and contact us for an order by clicking on the "Rent car" button
+<p align="center"><img align="center" src="./.github/learn_more_2.png"/></p>
