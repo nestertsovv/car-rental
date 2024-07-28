@@ -79,7 +79,7 @@ const CarsItem = ({ car }: Props) => {
             className="absolute top-[15px] right-[15px] z-[1]"
             onClick={() => onToggleToFavorite(car)}
           >
-            <svg
+            {/* <svg
               width="18"
               height="16"
               viewBox="0 0 18 16"
@@ -94,14 +94,14 @@ const CarsItem = ({ car }: Props) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>
-            {/* <Icon
+            </svg> */}
+            <Icon
               name="heart"
               size={18}
               stroke={isFavorite ? "var(--aqua-color)" : "var(--white-color)"}
               fill={isFavorite && "var(--aqua-color)"}
               className={clsx(s.favorite, isFavorite && s.isFavorite)}
-            /> */}
+            />
           </button>
           {/* <LazyLoadImage
             src={car.img}

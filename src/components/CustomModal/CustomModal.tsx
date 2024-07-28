@@ -43,7 +43,7 @@ const CustomModal = ({ children, isOpen, onClose }: Props) => {
     >
       <div className={s.bgModal}>
         <button onClick={onClose} className={s.btnClose}>
-          <svg
+          {/* <svg
             width="14"
             height="14"
             viewBox="0 0 14 14"
@@ -64,9 +64,9 @@ const CustomModal = ({ children, isOpen, onClose }: Props) => {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
 
-          {/* <Icon name="close" size={14} stroke="var(--black-color)" /> */}
+          <Icon name="close" size={14} stroke="var(--black-color)" />
         </button>
         <div className={s.bgWrapper}>{children}</div>
         <div className="w-[100%] mt-[24px]">
