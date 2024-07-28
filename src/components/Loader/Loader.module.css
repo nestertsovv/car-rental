@@ -1,0 +1,6 @@
+.loaderWrapper {
+  @apply flex justify-center items-center fixed top-0 left-0 w-[100%] h-[100%] z-[9];
+
+  /* background-color: rgba(34, 13, 91, 0.23); */
+  backdrop-filter: blur(10px);
+}

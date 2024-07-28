@@ -1,8 +1,8 @@
 import { Car } from "../redux/data.types";
 
 export type NumberObject = {
-  value: number;
-  label: number;
+  value: number | string;
+  label: number | string;
   count: number;
 };
 
@@ -33,8 +33,8 @@ const getAllPricesPerHour = (arr: Car[]) => {
   const seen: Set<number> = new Set();
 
   numberObjects = numberObjects.filter((obj) => {
-    if (obj.count > 1 && !seen.has(obj.value)) {
-      seen.add(obj.value);
+    if (obj.count > 1 && !seen.has(obj.value as number)) {
+      seen.add(obj.value as number);
       return true;
     }
     return obj.count === 1;
@@ -42,7 +42,13 @@ const getAllPricesPerHour = (arr: Car[]) => {
 
   const result = numberObjects.map(({ value, label }) => ({ value, label }));
 
-  return result;
+  const totalResult = result.map((el) => {
+    el.label = `To ${el.label}$`;
+
+    return el;
+  });
+
+  return totalResult;
 };
 
 export default getAllPricesPerHour;

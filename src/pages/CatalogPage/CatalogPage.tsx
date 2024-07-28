@@ -21,6 +21,7 @@ import { FilterProps } from "../../redux/data.types";
 import { getCarsByFilter } from "../../helpers/getCarsByFilter";
 import { setFilteredCars, setIsEmptyInfo } from "../../redux/filters/slice";
 import { setCars, setPage } from "../../redux/cars/slice";
+import Loader from "../../components/Loader/Loader";
 
 const CatalogPage = () => {
   const dispatch = useAppDispatch();
@@ -76,6 +77,8 @@ const CatalogPage = () => {
         ) : (
           <div className="my-[50px] text-center text-[18px]">{isEmptyInfo}</div>
         )}
+
+        {loading && <Loader />}
 
         {page < preflightCars?.totalPages &&
         filteredCars &&

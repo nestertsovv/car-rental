@@ -17,7 +17,6 @@ export const brandsName = [
   { value: "Audi", label: "Audi" },
   { value: "BMW", label: "BMW" },
   { value: "Chevrolet", label: "Chevrolet" },
-  { value: "Mercedes-Benz", label: "Mercedes-Benz" },
   { value: "Chrysler", label: "Chrysler" },
   { value: "Kia", label: "Kia" },
   { value: "Land", label: "Land" },

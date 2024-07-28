@@ -5,5 +5,11 @@
 .itemLink {
   a {
     @apply text-[20px] font-semibold;
+
+    transition: all 0.3s ease;
+
+    &:not(.active):hover {
+      @apply opacity-[0.6];
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { Car } from "../redux/data.types";
 import { NumberObject } from "./getAllPricesPerHour";
 
-const getAllMileage = (arr: Car[]) => {
+const getAllMileage = (arr: Car[], type: string) => {
   const allMileage = arr.map((car) => {
     const rounded = Math.round(Number(car.mileage) / 1000) * 1000;
 
@@ -11,8 +11,12 @@ const getAllMileage = (arr: Car[]) => {
     return roundedTo500;
   });
 
-  const minMileage = Math.min(...allMileage) - 500;
-  const maxMileage = Math.max(...allMileage);
+  const minMileage = Math.min(...allMileage);
+  const minIndex = allMileage.indexOf(minMileage);
+
+  if (minIndex !== -1) {
+    allMileage[minIndex] = allMileage[minIndex] - 500;
+  }
 
   const sortedAllMileage = allMileage.sort((a, b) => a - b);
 
@@ -33,8 +37,8 @@ const getAllMileage = (arr: Car[]) => {
   const seen: Set<number> = new Set();
 
   mileageObjects = mileageObjects.filter((obj) => {
-    if (obj.count > 1 && !seen.has(obj.value)) {
-      seen.add(obj.value);
+    if (obj.count > 1 && !seen.has(obj.value as number)) {
+      seen.add(obj.value as number);
       return true;
     }
     return obj.count === 1;
@@ -42,7 +46,13 @@ const getAllMileage = (arr: Car[]) => {
 
   const result = mileageObjects.map(({ value, label }) => ({ value, label }));
 
-  return result;
+  const totalResult = result.map((el) => {
+    el.label = `${type} ${el.label.toLocaleString("en-US")}`;
+
+    return el;
+  });
+
+  return totalResult;
 };
 
 export default getAllMileage;

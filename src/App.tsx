@@ -2,9 +2,10 @@ import { Suspense, lazy, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 
-import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import Loader from "./components/Loader/Loader";
+
+import { useAppDispatch } from "./redux/hooks";
 import { getAllCars } from "./redux/cars/operations";
-import { selectPage } from "./redux/cars/selectors";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
       <Toaster position="top-center" />
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

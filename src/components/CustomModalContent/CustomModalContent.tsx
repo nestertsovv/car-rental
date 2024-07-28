@@ -81,7 +81,10 @@ const CustomModalContent = ({ car }: Props) => {
           <li>Security deposit required</li>
           <li>
             Mileage:
-            <span className="text-[var(--aqua-color)]"> {car.mileage}</span>
+            <span className="text-[var(--aqua-color)]">
+              {" "}
+              {car.mileage.toLocaleString("en-US")}
+            </span>
           </li>
           <li>
             Price: <span className="text-[var(--aqua-color)]">{price}</span>

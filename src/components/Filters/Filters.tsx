@@ -33,7 +33,8 @@ const Filters = ({ onFilteredCars }: Props) => {
   const dispatch = useAppDispatch();
   const preflightCars = useAppSelector(selectPreflightCars);
   const pricesPerHourList = getAllPricesPerHour(preflightCars.results);
-  const mileageList = getAllMileage(preflightCars.results);
+  const mileageFromList = getAllMileage(preflightCars.results, "From");
+  const mileageToList = getAllMileage(preflightCars.results, "To");
   const filteredCars = useAppSelector(selectFilteredCars);
   const isEmptyInfo = useAppSelector(selectIsEmptyInfo);
   const page = useAppSelector(selectPage);
@@ -87,8 +88,14 @@ const Filters = ({ onFilteredCars }: Props) => {
   };
 
   return (
-    <div className="flex gap-[18px] justify-center mb-[24px]">
+    <div className="flex gap-[18px] justify-center mb-[24px] items-end">
       <div>
+        <label
+          htmlFor="brand"
+          className="inline-block mb-[8px] text-[var(--label-color)]"
+        >
+          Car brand
+        </label>
         <Select
           options={brandsName}
           placeholder="Enter the brand"
@@ -106,10 +113,17 @@ const Filters = ({ onFilteredCars }: Props) => {
       </div>
 
       <div>
+        <label
+          htmlFor="pricePerHour"
+          className="inline-block mb-[8px] text-[var(--label-color)]"
+        >
+          Price / 1 hour
+        </label>
         <Select
           options={pricesPerHourList}
           placeholder="To $"
           name="pricePerHour"
+          id="pricePerHour"
           className={clsx(s.select, s.selectPricePerHour)}
           styles={colorStyles}
           value={pricePerHourValue}
@@ -122,10 +136,17 @@ const Filters = ({ onFilteredCars }: Props) => {
       </div>
 
       <div>
+        <label
+          htmlFor="mileageFrom"
+          className="inline-block mb-[8px] text-[var(--label-color)]"
+        >
+          Car mileage / km
+        </label>
         <Select
-          options={mileageList}
+          options={mileageFromList}
           placeholder="From"
           name="mileageFrom"
+          id="mileageFrom"
           className={clsx(s.select, s.selectMileage)}
           styles={colorStyles}
           value={mileageFromValue}
@@ -138,10 +159,17 @@ const Filters = ({ onFilteredCars }: Props) => {
       </div>
 
       <div>
+        <label
+          htmlFor="mileageTo"
+          className="inline-block mb-[8px] text-[var(--label-color)]"
+        >
+          Car mileage / km
+        </label>
         <Select
-          options={mileageList}
+          options={mileageToList}
           placeholder="To"
           name="mileageTo"
+          id="mileageTo"
           className={clsx(s.select, s.selectMileage)}
           styles={colorStyles}
           value={mileageToValue}

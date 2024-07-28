@@ -1,8 +1,8 @@
 .select {
-  @apply h-[100%];
+  @apply h-[45px];
 
   &.selectBrand {
-    @apply min-w-[220px];
+    @apply min-w-[200px];
   }
 
   &.selectPricePerHour {
@@ -10,7 +10,7 @@
   }
 
   &.selectMileage {
-    @apply min-w-[160px];
+    @apply min-w-[140px];
   }
 
   svg {
