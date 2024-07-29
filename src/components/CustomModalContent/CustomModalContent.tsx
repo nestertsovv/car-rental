@@ -5,7 +5,6 @@ import { Car } from "../../redux/data.types";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import s from "./CustomModalContent.module.css";
-import { log } from "console";
 
 type Props = {
   car: Car;

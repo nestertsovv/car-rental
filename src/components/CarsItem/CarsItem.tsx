@@ -5,6 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import CustomModalContent from "../CustomModalContent/CustomModalContent";
 import CustomModal from "../CustomModal/CustomModal";
+import IconHeart from "../Icons/IconHeart/IconHeart";
 
 import { Car } from "../../redux/data.types";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
@@ -16,7 +17,6 @@ import {
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import s from "./CarsItem.module.css";
-import IconHeart from "../Icons/IconHeart/IconHeart";
 
 type Props = {
   car: Car;

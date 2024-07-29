@@ -51,6 +51,8 @@ const getAllMileage = (arr: Car[], type: string) => {
     return el;
   });
 
+  type === "From" ? totalResult.pop() : totalResult.shift();
+
   return totalResult;
 };
 
